@@ -28,6 +28,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<String> validateUser(@RequestBody User user) {
+        System.out.println("Validating user");
         Optional<User> userFromDB = this.userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
         if(userFromDB.isPresent()) {
             return ResponseEntity.ok("success");

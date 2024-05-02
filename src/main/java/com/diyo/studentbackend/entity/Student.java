@@ -22,9 +22,9 @@ public class Student {
     private String lastName;
     private String address;
     private String gender;
-    private Date dob;
     private String email;
     private String phone;
     private String status;
     private String active;
+    private String level;
 }
